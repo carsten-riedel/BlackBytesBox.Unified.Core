@@ -86,9 +86,11 @@ Ensure-Variable -Variable { $NUGET_TEST_PAT } -ExitIfNullOrEmpty -HideValue
 #Required directorys
 $artifactsOutputFolderName = "artifacts"
 $reportsOutputFolderName = "reports"
+$docsOutputFolderName = "docs"
 
 $outputRootArtifactsDirectory = New-DirectoryFromSegments -Paths @($topLevelDirectory, $artifactsOutputFolderName)
 $outputRootReportResultsDirectory = New-DirectoryFromSegments -Paths @($topLevelDirectory, $reportsOutputFolderName)
+$outputRootDocsResultsDirectory = New-DirectoryFromSegments -Paths @($topLevelDirectory, $docsOutputFolderName)
 $targetConfigAllowedLicenses = Join-Segments -Segments @($topLevelDirectory, ".config", "allowed-licenses.json")
 $targetConfigLicensesMappings = Join-Segments -Segments @($topLevelDirectory, ".config", "licenses-mapping.json")
 
@@ -102,9 +104,6 @@ $gitMailLocal = git config user.email
 
 $gitTempUser = "Workflow"
 $gitTempMail = "carstenriedel@outlook.com"  # Assuming a placeholder email
-
-git config user.name $gitTempUser
-git config user.email $gitTempMail
 
 # Initialize the array to accumulate projects.
 $solutionFiles = Find-FilesByPattern -Path "$topLevelDirectory\source" -Pattern "*.sln"
@@ -205,11 +204,18 @@ foreach ($projectFile in $solutionProjectsObj) {
 
 
 # Deploy ------------------------------------
+git config user.name $gitTempUser
+git config user.email $gitTempMail
+
 Write-Host "===> Deploying channel: '$($channelRoot.ToLower())' | Local: $($isLocal.ToString()) | CI/CD: $($isCiCd.ToString()) =======================" -ForegroundColor Green
 Write-Host "===> Deploying channel: '$($channelRoot.ToLower())' | Local: $($isLocal.ToString()) | CI/CD: $($isCiCd.ToString()) =======================" -ForegroundColor Green
 Write-Host "===> Deploying channel: '$($channelRoot.ToLower())' | Local: $($isLocal.ToString()) | CI/CD: $($isCiCd.ToString()) =======================" -ForegroundColor Green
 
 foreach ($projectFile in $solutionProjectsObj) {
+
+    $isTestProject = Invoke-Exec -Executable "dotnet" -Arguments @("bbdist", "csproj", "--file", "$($projectFile.FullName)", "--property", "IsTestProject")
+    $isPackable = Invoke-Exec -Executable "dotnet" -Arguments @("bbdist", "csproj", "--file", "$($projectFile.FullName)", "--property", "IsPackable")
+    $isPublishable = Invoke-Exec -Executable "dotnet" -Arguments @("bbdist", "csproj", "--file", "$($projectFile.FullName)", "--property", "IsPublishable")
 
     $outputReportDirectory = New-DirectoryFromSegments -Paths @($outputRootReportResultsDirectory, "$($projectFile.BaseName)" , "$branchVersionFolder")
     $outputArtifactsDirectory = New-DirectoryFromSegments -Paths @($outputRootArtifactsDirectory, "$($projectFile.BaseName)" , "$branchVersionFolder")
@@ -233,6 +239,7 @@ foreach ($projectFile in $solutionProjectsObj) {
         }
         if ($isCiCd)
         {
+
             $firstFileMatch = Get-ChildItem -Path $outputArtifactPackDirectory -Filter "*.nupkg" -File -Recurse | Select-Object -First 1
             if ($firstFileMatch) {
                 Write-Host "===> NuGet package found: '$($firstFileMatch.FullName)'. Proceeding with push..." -ForegroundColor Green
@@ -242,6 +249,13 @@ foreach ($projectFile in $solutionProjectsObj) {
             else {
                 Write-Host "===> Warning: No NuGet package (*.nupkg) found in '$outputArtifactPackDirectory' for deployment." -ForegroundColor Yellow
             }
+            
+            Copy-FilesRecursively -SourceDirectory "$outputReportDirectory" -DestinationDirectory "$outputRootDocsResultsDirectory/$channelRoot" -Filter "*" -CopyEmptyDirs $false -ForceOverwrite $true -CleanDestination $true
+
+            git add $outputRootDocsResultsDirectory/$channelRoot/
+            git commit -m "Updated from Workflow [no ci]"
+            git push origin $currentBranch
+
         }
     } elseif ($channelRoot.ToLower() -in @("quality")) {
         if ($isLocal)
@@ -316,6 +330,7 @@ foreach ($projectFile in $solutionProjectsObj) {
     } else {
         <# Action when all if and elseif conditions are false #>
     }
-
 }
 
+git config user.name $gitUserLocal
+git config user.email $gitMailLocal
