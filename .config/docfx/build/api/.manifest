@@ -1,6 +1,7 @@
 {
   "BlackBytesBox.Unified.Core.Extensions.StringExtensions": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.yml",
   "BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.yml",
+  "BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.ToShortUUID(System.String)": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.yml",
   "BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific(System.String,System.Char,System.Int32,System.Int32)": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.yml",
   "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.yml",
   "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.MatchesAnyPattern(System.String,System.Collections.Generic.IEnumerable{System.String})": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.yml",
@@ -8,5 +9,10 @@
   "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.MatchesAnyPattern(System.String,System.String)": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.yml",
   "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.MatchesAnyPattern(System.String,System.String[])": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.yml",
   "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.ValidateWhitelistBlacklist(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.yml",
-  "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.ValidateWhitelistBlacklist(System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.yml"
+  "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.ValidateWhitelistBlacklist(System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.yml",
+  "BlackBytesBox.Unified.Core.Utilities.MainContext": "BlackBytesBox.Unified.Core.Utilities.MainContext.yml",
+  "BlackBytesBox.Unified.Core.Utilities.MainContext.MainContext": "BlackBytesBox.Unified.Core.Utilities.MainContext.MainContext.yml",
+  "BlackBytesBox.Unified.Core.Utilities.MainContext.MainContext.EnsureSingleInstance(System.Action,System.Boolean)": "BlackBytesBox.Unified.Core.Utilities.MainContext.MainContext.yml",
+  "BlackBytesBox.Unified.Core.Utilities.MainContext.MainContext.TryGetOrCreateAppNameDirectory(System.String[],System.Boolean,System.String[],System.Boolean)": "BlackBytesBox.Unified.Core.Utilities.MainContext.MainContext.yml",
+  "BlackBytesBox.Unified.Core.Utilities.MainContext.MainContext.TryGetPrimaryFileLocation": "BlackBytesBox.Unified.Core.Utilities.MainContext.MainContext.yml"
 }

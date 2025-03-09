@@ -7,4 +7,9 @@ items:
     name: StringExtensions
   - uid: BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions
     name: ValidationsStringExtensions
+- uid: BlackBytesBox.Unified.Core.Utilities.MainContext
+  name: BlackBytesBox.Unified.Core.Utilities.MainContext
+  items:
+  - uid: BlackBytesBox.Unified.Core.Utilities.MainContext.MainContext
+    name: MainContext
 memberLayout: SamePage

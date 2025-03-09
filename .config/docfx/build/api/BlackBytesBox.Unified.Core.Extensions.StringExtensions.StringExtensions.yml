@@ -5,6 +5,7 @@ items:
   id: StringExtensions
   parent: BlackBytesBox.Unified.Core.Extensions.StringExtensions
   children:
+  - BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.ToShortUUID(System.String)
   - BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific(System.String,System.Char,System.Int32,System.Int32)
   langs:
   - csharp
@@ -24,7 +25,7 @@ items:
   assemblies:
   - BlackBytesBox.Unified.Core
   namespace: BlackBytesBox.Unified.Core.Extensions.StringExtensions
-  summary: Provides extension methods for the <xref href="System.String" data-throw-if-not-resolved="false"></xref> class.
+  summary: Provides extension methods for string operations, enhancing the built-in string manipulation capabilities.
   example: []
   syntax:
     content: public static class StringExtensions
@@ -39,6 +40,46 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.ToShortUUID(System.String)
+  commentId: M:BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.ToShortUUID(System.String)
+  id: ToShortUUID(System.String)
+  isExtensionMethod: true
+  parent: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToShortUUID(string?)
+  nameWithType: StringExtensions.ToShortUUID(string?)
+  fullName: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.ToShortUUID(string?)
+  type: Method
+  source:
+    remote:
+      path: source/BlackBytesBox.Unified.Core/BlackBytesBox.Unified.Core/Extensions/StringExtensions/ToShortUUID.cs
+      branch: feature/init
+      repo: https://github.com/carsten-riedel/BlackBytesBox.Unified.Core.git
+    id: ToShortUUID
+    path: ../../../source/BlackBytesBox.Unified.Core/BlackBytesBox.Unified.Core/Extensions/StringExtensions/ToShortUUID.cs
+    startLine: 21
+  assemblies:
+  - BlackBytesBox.Unified.Core
+  namespace: BlackBytesBox.Unified.Core.Extensions.StringExtensions
+  summary: Generates a UUID for the given string using MD5 hashing and returns it as a string without hyphens.
+  example:
+  - <pre><code class="lang-csharp">string uuid = "your-long-string-here".ToShortUUID();</code></pre>
+  syntax:
+    content: public static string ToShortUUID(this string? input)
+    parameters:
+    - id: input
+      type: System.String
+      description: The input string for which to generate the UUID. If null, an empty string is used.
+    return:
+      type: System.String
+      description: A string representation of the UUID generated from the input string, without hyphens.
+    content.vb: Public Shared Function ToShortUUID(input As String) As String
+  overload: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.ToShortUUID*
+  nameWithType.vb: StringExtensions.ToShortUUID(String)
+  fullName.vb: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.ToShortUUID(String)
+  name.vb: ToShortUUID(String)
 - uid: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific(System.String,System.Char,System.Int32,System.Int32)
   commentId: M:BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific(System.String,System.Char,System.Int32,System.Int32)
   id: TrimSpecific(System.String,System.Char,System.Int32,System.Int32)
@@ -399,6 +440,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.ToShortUUID*
+  commentId: Overload:BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.ToShortUUID
+  href: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.html#BlackBytesBox_Unified_Core_Extensions_StringExtensions_StringExtensions_ToShortUUID_System_String_
+  name: ToShortUUID
+  nameWithType: StringExtensions.ToShortUUID
+  fullName: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.ToShortUUID
 - uid: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific*
   commentId: Overload:BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific
   href: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.html#BlackBytesBox_Unified_Core_Extensions_StringExtensions_StringExtensions_TrimSpecific_System_String_System_Char_System_Int32_System_Int32_
