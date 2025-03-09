@@ -367,3 +367,4 @@ FodyWeavers.xsd
 *[Ss][Ee][Cc][Rr][Ee][Tt]*
 /artifacts/**/*
 /reports/**/*
+*docfx_local.json*

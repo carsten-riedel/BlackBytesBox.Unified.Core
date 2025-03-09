@@ -28,7 +28,7 @@
         ]
       }
     ],
-    "output": "C:/dev/github.com/carsten-riedel/BlackBytesBox.Unified.Core/reports/BlackBytesBox.Unified.Core/feature/INIT/0.1.20251.25286/docfx",
+    "output": "C:/dev/github.com/carsten-riedel/BlackBytesBox.Unified.Core/reports/BlackBytesBox.Unified.Core/feature/INIT/0.1.20251.25300/docfx",
     "template": [
       "statictoc",
       "../_exported_templates/override"
