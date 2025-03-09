@@ -20,7 +20,6 @@ namespace BlackBytesBox.Unified.Core.Tests
         public static async Task ClassInit(TestContext context)
         {
             // Create the builder using the minimal hosting model.
-
             
             builder = Host.CreateDefaultBuilder();
 
