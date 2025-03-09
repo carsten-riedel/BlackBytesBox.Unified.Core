@@ -1,6 +1,6 @@
 # BlackBytesBox.Unified.Core
 
-BlackBytesBox.Unified.Core is a core .NET Standard library within the BlackBytesBox ecosystem. It offers basic functionality to build cross-platform applications and ensures consistent behavior across diverse .NET implementations.
+BlackBytesBox.Unified.Core is a comprehensive library that provides a wide range of generic helper functionalities, designed to enhance and simplify coding tasks across .NET Standard projects.
 
 For API details, licensing information, and third-party notices, please visit the official documentation page:
 
