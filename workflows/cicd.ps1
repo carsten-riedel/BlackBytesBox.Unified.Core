@@ -279,6 +279,13 @@ foreach ($projectFile in $solutionProjectsObj) {
             else {
                 Write-Host "===> Warning: No NuGet package (*.nupkg) found in '$outputArtifactPackDirectory' for deployment." -ForegroundColor Yellow
             }
+
+            Copy-FilesRecursively -SourceDirectory "$outputReportDirectory" -DestinationDirectory "$outputRootDocsResultsDirectory/$channelRoot" -Filter "*" -CopyEmptyDirs $false -ForceOverwrite $true -CleanDestination $true
+
+            git add $outputRootDocsResultsDirectory/$channelRoot/
+            git commit -m "Updated from Workflow [no ci]"
+            git push origin $currentBranch
+
         }
     } elseif ($channelRoot.ToLower() -in @("staging")) {
         if ($isLocal)
@@ -302,6 +309,13 @@ foreach ($projectFile in $solutionProjectsObj) {
             else {
                 Write-Host "===> Warning: No NuGet package (*.nupkg) found in '$outputArtifactPackDirectory' for deployment." -ForegroundColor Yellow
             }
+
+            Copy-FilesRecursively -SourceDirectory "$outputReportDirectory" -DestinationDirectory "$outputRootDocsResultsDirectory/$channelRoot" -Filter "*" -CopyEmptyDirs $false -ForceOverwrite $true -CleanDestination $true
+
+            git add $outputRootDocsResultsDirectory/$channelRoot/
+            git commit -m "Updated from Workflow [no ci]"
+            git push origin $currentBranch
+
         }
     } elseif ($channelRoot.ToLower() -in @("production")) {
         if ($isLocal)
@@ -326,6 +340,12 @@ foreach ($projectFile in $solutionProjectsObj) {
             else {
                 Write-Host "===> Warning: No NuGet package (*.nupkg) found in '$outputArtifactPackDirectory' for deployment." -ForegroundColor Yellow
             }
+
+            Copy-FilesRecursively -SourceDirectory "$outputReportDirectory" -DestinationDirectory "$outputRootDocsResultsDirectory/$channelRoot" -Filter "*" -CopyEmptyDirs $false -ForceOverwrite $true -CleanDestination $true
+
+            git add $outputRootDocsResultsDirectory/$channelRoot/
+            git commit -m "Updated from Workflow [no ci]"
+            git push origin $currentBranch
         }
     } else {
         <# Action when all if and elseif conditions are false #>
