@@ -1,0 +1,429 @@
+### YamlMime:ManagedReference
+items:
+- uid: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions
+  commentId: T:BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions
+  id: StringExtensions
+  parent: BlackBytesBox.Unified.Core.Extensions.StringExtensions
+  children:
+  - BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific(System.String,System.Char,System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions
+  type: Class
+  source:
+    remote:
+      path: source/BlackBytesBox.Unified.Core/BlackBytesBox.Unified.Core/Extensions/StringExtensions/TrimSpecific.cs
+      branch: feature/init
+      repo: https://github.com/carsten-riedel/BlackBytesBox.Unified.Core.git
+    id: StringExtensions
+    path: ../../../source/BlackBytesBox.Unified.Core/BlackBytesBox.Unified.Core/Extensions/StringExtensions/TrimSpecific.cs
+    startLine: 5
+  assemblies:
+  - BlackBytesBox.Unified.Core
+  namespace: BlackBytesBox.Unified.Core.Extensions.StringExtensions
+  summary: Provides extension methods for the <xref href="System.String" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public static class StringExtensions
+    content.vb: Public Module StringExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific(System.String,System.Char,System.Int32,System.Int32)
+  commentId: M:BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific(System.String,System.Char,System.Int32,System.Int32)
+  id: TrimSpecific(System.String,System.Char,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: TrimSpecific(string, char, int, int)
+  nameWithType: StringExtensions.TrimSpecific(string, char, int, int)
+  fullName: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific(string, char, int, int)
+  type: Method
+  source:
+    remote:
+      path: source/BlackBytesBox.Unified.Core/BlackBytesBox.Unified.Core/Extensions/StringExtensions/TrimSpecific.cs
+      branch: feature/init
+      repo: https://github.com/carsten-riedel/BlackBytesBox.Unified.Core.git
+    id: TrimSpecific
+    path: ../../../source/BlackBytesBox.Unified.Core/BlackBytesBox.Unified.Core/Extensions/StringExtensions/TrimSpecific.cs
+    startLine: 31
+  assemblies:
+  - BlackBytesBox.Unified.Core
+  namespace: BlackBytesBox.Unified.Core.Extensions.StringExtensions
+  summary: Trims occurrences of a specified character from the start and end of the string up to a defined count.
+  remarks: >-
+    This extension method removes the <code class="paramref">charToTrim</code> from the beginning of the string up to <code class="paramref">countFromStart</code> times and
+
+    from the end up to <code class="paramref">countFromEnd</code> times. If the input is <code>null</code> or empty, it returns the input unchanged.
+
+    If all characters are trimmed, an empty string is returned.
+  example:
+  - >-
+    <pre><code class="lang-csharp">// Example usage:
+
+    string original = "###Hello World###";
+
+    string trimmed = original.TrimSpecific('#', 3, 3);
+
+    Console.WriteLine(trimmed); // Outputs: "Hello World"</code></pre>
+  syntax:
+    content: public static string TrimSpecific(this string input, char charToTrim, int countFromStart, int countFromEnd)
+    parameters:
+    - id: input
+      type: System.String
+      description: The string to trim. May be <code>null</code> or empty.
+    - id: charToTrim
+      type: System.Char
+      description: The character to remove from both ends.
+    - id: countFromStart
+      type: System.Int32
+      description: The maximum number of occurrences to remove from the start.
+    - id: countFromEnd
+      type: System.Int32
+      description: The maximum number of occurrences to remove from the end.
+    return:
+      type: System.String
+      description: >-
+        A new string with the specified character trimmed from the beginning and end according to the provided counts.
+
+        Returns the original string if it is <code>null</code> or empty, or an empty string if all characters are trimmed.
+    content.vb: Public Shared Function TrimSpecific(input As String, charToTrim As Char, countFromStart As Integer, countFromEnd As Integer) As String
+  overload: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific*
+  nameWithType.vb: StringExtensions.TrimSpecific(String, Char, Integer, Integer)
+  fullName.vb: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific(String, Char, Integer, Integer)
+  name.vb: TrimSpecific(String, Char, Integer, Integer)
+references:
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BlackBytesBox.Unified.Core.Extensions.StringExtensions
+  commentId: N:BlackBytesBox.Unified.Core.Extensions.StringExtensions
+  href: BlackBytesBox.html
+  name: BlackBytesBox.Unified.Core.Extensions.StringExtensions
+  nameWithType: BlackBytesBox.Unified.Core.Extensions.StringExtensions
+  fullName: BlackBytesBox.Unified.Core.Extensions.StringExtensions
+  spec.csharp:
+  - uid: BlackBytesBox
+    name: BlackBytesBox
+    href: BlackBytesBox.html
+  - name: .
+  - uid: BlackBytesBox.Unified
+    name: Unified
+    href: BlackBytesBox.Unified.html
+  - name: .
+  - uid: BlackBytesBox.Unified.Core
+    name: Core
+    href: BlackBytesBox.Unified.Core.html
+  - name: .
+  - uid: BlackBytesBox.Unified.Core.Extensions
+    name: Extensions
+    href: BlackBytesBox.Unified.Core.Extensions.html
+  - name: .
+  - uid: BlackBytesBox.Unified.Core.Extensions.StringExtensions
+    name: StringExtensions
+    href: BlackBytesBox.Unified.Core.Extensions.StringExtensions.html
+  spec.vb:
+  - uid: BlackBytesBox
+    name: BlackBytesBox
+    href: BlackBytesBox.html
+  - name: .
+  - uid: BlackBytesBox.Unified
+    name: Unified
+    href: BlackBytesBox.Unified.html
+  - name: .
+  - uid: BlackBytesBox.Unified.Core
+    name: Core
+    href: BlackBytesBox.Unified.Core.html
+  - name: .
+  - uid: BlackBytesBox.Unified.Core.Extensions
+    name: Extensions
+    href: BlackBytesBox.Unified.Core.Extensions.html
+  - name: .
+  - uid: BlackBytesBox.Unified.Core.Extensions.StringExtensions
+    name: StringExtensions
+    href: BlackBytesBox.Unified.Core.Extensions.StringExtensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific*
+  commentId: Overload:BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific
+  href: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.html#BlackBytesBox_Unified_Core_Extensions_StringExtensions_StringExtensions_TrimSpecific_System_String_System_Char_System_Int32_System_Int32_
+  name: TrimSpecific
+  nameWithType: StringExtensions.TrimSpecific
+  fullName: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

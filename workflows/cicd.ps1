@@ -90,6 +90,8 @@ $reportsOutputFolderName = "reports"
 $outputRootArtifactsDirectory = New-DirectoryFromSegments -Paths @($topLevelDirectory, $artifactsOutputFolderName)
 $outputRootReportResultsDirectory = New-DirectoryFromSegments -Paths @($topLevelDirectory, $reportsOutputFolderName)
 $targetConfigAllowedLicenses = Join-Segments -Segments @($topLevelDirectory, ".config", "allowed-licenses.json")
+$targetConfigLicensesMappings = Join-Segments -Segments @($topLevelDirectory, ".config", "licenses-mapping.json")
+
 
 if (-not $isCiCd) { Delete-FilesByPattern -Path "$outputRootArtifactsDirectory" -Pattern "*"  }
 if (-not $isCiCd) { Delete-FilesByPattern -Path "$outputRootReportResultsDirectory" -Pattern "*"  }
@@ -161,7 +163,7 @@ foreach ($projectFile in $solutionProjectsObj) {
         $jsonOutputBom = Invoke-Exec -Executable "dotnet" -Arguments @("list", "$($projectFile.FullName)", "package", "--include-transitive", "--format", "json")
         New-DotnetBillOfMaterialsReport -jsonInput $jsonOutputBom -OutputFile "$outputReportDirectory\ReportBillOfMaterials.md" -OutputFormat markdown -IgnoreTransitivePackages $true
     
-        Invoke-Exec -Executable "dotnet" -Arguments @("nuget-license", "--input", "$($projectFile.FullName)", "--allowed-license-types", "$targetConfigAllowedLicenses", "--output", "JsonPretty", "--file-output", "$outputReportDirectory/ReportProjectLicences.json")  -CaptureOutput $false
+        Invoke-Exec -Executable "dotnet" -Arguments @("nuget-license", "--input", "$($projectFile.FullName)", "--allowed-license-types", "$targetConfigAllowedLicenses", "--output", "JsonPretty", "--licenseurl-to-license-mappings" ,"$targetConfigLicensesMappings", "--file-output", "$outputReportDirectory/ReportProjectLicences.json" )
         Generate-ThirdPartyNotices -LicenseJsonPath "$outputReportDirectory/ReportProjectLicences.json" -OutputPath "$outputReportDirectory\ReportThirdPartyNotices.txt"
     }
 

@@ -1,10 +1,10 @@
 ### YamlMime:TableOfContent
 items:
-- uid: BlackBytesBox.Routed.Middleware
-  name: BlackBytesBox.Routed.Middleware
+- uid: BlackBytesBox.Unified.Core.Extensions.StringExtensions
+  name: BlackBytesBox.Unified.Core.Extensions.StringExtensions
   items:
-  - uid: BlackBytesBox.Routed.Middleware.IOsVersionService
-    name: IOsVersionService
-  - uid: BlackBytesBox.Routed.Middleware.OsVersionService
-    name: OsVersionService
+  - uid: BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions
+    name: StringExtensions
+  - uid: BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions
+    name: ValidationsStringExtensions
 memberLayout: SamePage

@@ -1,8 +1,12 @@
 {
-  "BlackBytesBox.Routed.Middleware": "BlackBytesBox.Routed.Middleware.yml",
-  "BlackBytesBox.Routed.Middleware.IOsVersionService": "BlackBytesBox.Routed.Middleware.IOsVersionService.yml",
-  "BlackBytesBox.Routed.Middleware.IOsVersionService.ShowOsVersion(System.Threading.CancellationToken)": "BlackBytesBox.Routed.Middleware.IOsVersionService.yml",
-  "BlackBytesBox.Routed.Middleware.OsVersionService": "BlackBytesBox.Routed.Middleware.OsVersionService.yml",
-  "BlackBytesBox.Routed.Middleware.OsVersionService.#ctor(Microsoft.Extensions.Logging.ILogger{BlackBytesBox.Routed.Middleware.OsVersionService})": "BlackBytesBox.Routed.Middleware.OsVersionService.yml",
-  "BlackBytesBox.Routed.Middleware.OsVersionService.ShowOsVersion(System.Threading.CancellationToken)": "BlackBytesBox.Routed.Middleware.OsVersionService.yml"
+  "BlackBytesBox.Unified.Core.Extensions.StringExtensions": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.yml",
+  "BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.yml",
+  "BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.TrimSpecific(System.String,System.Char,System.Int32,System.Int32)": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.StringExtensions.yml",
+  "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.yml",
+  "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.MatchesAnyPattern(System.String,System.Collections.Generic.IEnumerable{System.String})": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.yml",
+  "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.MatchesAnyPattern(System.String,System.Collections.Generic.List{System.String})": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.yml",
+  "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.MatchesAnyPattern(System.String,System.String)": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.yml",
+  "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.MatchesAnyPattern(System.String,System.String[])": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.yml",
+  "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.ValidateWhitelistBlacklist(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.yml",
+  "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.ValidateWhitelistBlacklist(System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})": "BlackBytesBox.Unified.Core.Extensions.StringExtensions.ValidationsStringExtensions.yml"
 }

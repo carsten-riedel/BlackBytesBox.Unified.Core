@@ -4,7 +4,7 @@
       "noRestore": true,
       "src": [
         {
-          "src": "C:/dev/github.com/carsten-riedel/BlackBytesBox.Routed.Middleware/source/BlackBytesBox.Routed.Middleware/BlackBytesBox.Routed.Middleware",
+          "src": "C:/dev/github.com/carsten-riedel/BlackBytesBox.Unified.Core/source/BlackBytesBox.Unified.Core/BlackBytesBox.Unified.Core",
           "files": [
             "**/*.csproj"
           ]
@@ -28,14 +28,14 @@
         ]
       }
     ],
-    "output": "C:/dev/github.com/carsten-riedel/BlackBytesBox.Routed.Middleware/reports/BlackBytesBox.Routed.Middleware/feature/SETUP/0.1.20251.15433/docfx",
+    "output": "C:/dev/github.com/carsten-riedel/BlackBytesBox.Unified.Core/reports/BlackBytesBox.Unified.Core/feature/INIT/0.1.20251.25286/docfx",
     "template": [
       "statictoc",
       "../_exported_templates/override"
     ],
     "globalMetadata": {
-      "_appName": "BlackBytesBox.Routed.Middleware",
-      "_appTitle": "BlackBytesBox.Routed.Middleware",
+      "_appName": "BlackBytesBox.Unified.Core",
+      "_appTitle": "BlackBytesBox.Unified.Core",
       "_appFooter": "<pre></pre>"
     }
   }
